@@ -54,6 +54,13 @@ Below are some general insights.
 Here are some more specific insights that the city could use to improve services.
 
 - The service request type “Buildings – Plumbing Violations” takes on average 92.22 days to complete. This has been improving since summer of 2024.
+- “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. Some sort of enforcement or resource management measure is recommended to decrease these complaints in the summer and fall of 2025.
+  - Below is a line chart of this trend across the city:
+  - <image>
+  - The maps below visualize the number of complaints of this request type in 2023 and 2024, respectively.
+  - <image> 
+  - <image>
+  
 
 
 
