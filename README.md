@@ -44,7 +44,7 @@ The pbix file can be downloaded here:
 
 ## Summary of Findings
 
-Below are some general insights.
+Below are some high-level general insights.
 
 - There is a general trend where service requests are more common during the warmer months and dip during the winter months.
 - Over the past two years, the West Side saw the most service requests, especially in the summer of 2023 in the Austin community area. This was driven by service requests in the “Transportation and Street” and “Home and Buildings” categories, and more specifically due to requests that were “Water in Basement Complaint” types.
