@@ -29,10 +29,10 @@ The pbix file can be downloaded here:
   - **transform_sr_data:** Below are some of the main transformations this function applies.
     - Remove "Aircraft Noise Complaint" SRs (~17% of all SRs).
     - Remove "311 INFORMATION ONLY CALL" SRs (~36% of all SRs).
-    - Remove data that do not have latitude or longitude information (less than 0.05% of data).
+    - Remove data that do not have latitude or longitude information (~0.05% of data).
     - Create new attribute 'Completion Time in Days' for SRs.
     - Join the SRs data table with the categories data table.
-    - There are some SRs that were completed unrealistically quickly. For example, multiple graffiti removal requests were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I group the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and the rest of the attributes are the first available value.
+    - There are some SRs that were completed extremely quickly. For example, multiple graffiti removal requests at the same location were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I group the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and the rest of the attributes are the first available value.
     - Based on the completion times computed above, I create new columns "Closed Date"
     - Created "Open SR Time in Days" for open SRs, which is the number of days between "Created Date" and date that this pipeline was executed.
   - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
