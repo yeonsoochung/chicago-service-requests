@@ -39,5 +39,9 @@ The pbix file can be downloaded here:
   - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
  
 - As of Mar. 17, 2025, the raw SRs data from the past two years contained 3,689,117 data points. The processed SRs data contained 1,919,283 rows.
+- The processed dataset are shown in the PBI data model below:
+- <image>
+
+
 
 
