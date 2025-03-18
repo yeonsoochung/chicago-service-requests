@@ -29,8 +29,7 @@ The pbix file can be downloaded here:
   - **transform_sr_data:** Below are some of the main transformations this function applies.
     - Only use SRs that fall under the types and categories that exist in my categories data table.
     - Remove 'Aircraft Noise Complaint' SRs (~17% of all SRs) because I think this type of SR is more suitable for a different project.
-    - Remove data that do not have latitude/longitude information (less that 0.05% of data).
-    - Rename columns to title-case format.
+    - Remove data that do not have latitude/longitude information (less than 0.05% of data).
     - Create 'Completion Time in Days' for SRs.
     - Join the SRs data table with the categories data table.
     - There are some SRs that were completed unrealistically quickly. For example, multiple graffiti removal requests were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I grouped the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and rest of the attributes are the first available value.
