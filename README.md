@@ -4,7 +4,7 @@ The City of Chicago regularly collects and publishes many types of city-related 
 
 In this project, I developed an automated end-to-end ELT data pipeline that extracts the past two years of SR data via their API; store the data to Google Cloud Storage; load it to BigQuery for transformation with Python (Pandas); and then import the processed data to Power BI for visual analysis.
 
-Complementary data tables that were created manually are (1). Data on Chicago's sides (e.g., North Side) and community areas (e.g., Humboldt Park); and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal.
+Complementary data tables that I created manually are (1). Table of Chicago's sides (e.g., North Side) and community areas (e.g., Humboldt Park); and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal.
 
 My interactive Power BI dashboard can be viewed here (data collected on Mar. 17, 2025):
 
