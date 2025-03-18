@@ -38,10 +38,22 @@ The pbix file can be downloaded here:
   - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
   - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
  
-- As of Mar. 17, 2025, the raw SRs data from the past two years contained 3,689,117 data points. The processed SRs data contained 1,919,283 rows.
+- As of Mar. 17, 2025, the raw SRs data from the past two years contained 3,689,117 data points. The processed SRs data contained 2,095,197 rows.
 - The processed dataset are shown in the PBI data model below:
 - <image>
 
+## Summary of Findings
+
+Below are some general insights.
+
+- There is a general trend where service requests are more common during the warmer months and dip during the winter months.
+- Over the past two years, the West Side saw the most service requests, especially in the summer of 2023 in the Austin community area. This was driven by service requests in the “Transportation and Street” and “Home and Buildings” categories, and more specifically due to requests that were “Water in Basement Complaint” types.
+- In terms of service requests per capita, the Far Southeast Side had the highest over the past two years. In terms of average completion time of a service request, the South Side had the longest.
+- The Far North and South Sides see “Home and Buildings” as the most common service request category, while “Transportation and Streets” is the most common category in the other sides. 
+
+Here are some more specific insights that the city could use to improve services.
+
+- The service request type “Buildings – Plumbing Violations” takes on average 92.22 days to complete. This has been improving since summer of 2024.
 
 
 
