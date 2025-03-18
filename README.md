@@ -27,14 +27,15 @@ The pbix file can be downloaded here:
    
 - **csr_bq_transform_data.py:** This script contains the following functions for preparing and transforming the data.
   - **transform_sr_data:** Below are some of the main transformations this function applies.
-    - Only use SRs that fall under the types and categories that exist in my categories data table.
-    - Remove 'Aircraft Noise Complaint' SRs (~17% of all SRs) because I think this type of SR is more suitable for a different project.
-    - Remove data that do not have latitude/longitude information (less than 0.05% of data).
-    - Create 'Completion Time in Days' for SRs.
+    - Remove "Aircraft Noise Complaint" SRs (~17% of all SRs).
+    - Remove "311 INFORMATION ONLY CALL" SRs (~36% of all SRs).
+    - Remove data that do not have latitude or longitude information (less than 0.05% of data).
+    - Create new attribute 'Completion Time in Days' for SRs.
     - Join the SRs data table with the categories data table.
-    - There are some SRs that were completed unrealistically quickly. For example, multiple graffiti removal requests were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I grouped the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and rest of the attributes are the first available value.
-    - Based on the completion times computed above, I create new columns "Closed Date" and "Open SR Time in Days."
-  - **community_areas:** This formats the community areas data table by title-casing the values and adding 2022 population data for each area.
+    - There are some SRs that were completed unrealistically quickly. For example, multiple graffiti removal requests were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I group the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and the rest of the attributes are the first available value.
+    - Based on the completion times computed above, I create new columns "Closed Date"
+    - Created "Open SR Time in Days" for open SRs, which is the number of days between "Created Date" and date that this pipeline was executed.
+  - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
   - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
  
 - As of Mar. 17, 2025, the raw SRs data from the past two years contained 3,689,117 data points. The processed SRs data contained 1,919,283 rows.
