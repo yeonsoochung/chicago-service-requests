@@ -12,6 +12,8 @@ My interactive Power BI dashboard can be viewed here (data collected on Mar. 19,
 
 The pbix file can be downloaded here: https://drive.google.com/file/d/1f07mz5zQbfhoZL6nrrBVhBj_5F1k3teo
 
+I will make attempts to update this dashboard at least once a month. I plan to include data that includes two full years (Jan. 1 - Dec. 31) prior to updating as well as the current year up to the date my pipeline is executed.
+
 Below is an image of the first page of my report.
 
 <p align="center">
