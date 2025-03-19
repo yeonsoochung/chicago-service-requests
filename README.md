@@ -10,6 +10,12 @@ My interactive Power BI dashboard can be viewed here (data collected on Mar. 19,
 
 The pbix file can be downloaded here:
 
+Below is an image of the first page of my report.
+
+<p align="center">
+<img src="images/dashboard.jpg" alt="Alt text" width="1000"/>
+</p>
+
 ## ELT Pipeline and Data Model
 
 - **csr_dag.py:** This Python script creates the Airflow DAG, pictured below:
