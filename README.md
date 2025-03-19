@@ -57,7 +57,7 @@ Below are some high-level general insights.
 Here are some more specific insights that the city could use to improve services.
 
 - “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. Some sort of enforcement or resource management measure is suggested to decrease these complaints in the upcoming summer and fall.
-  - Below is a line chart of this trend across the city:
+  - Below is a line chart of this trend across the city (the legend only says "Transportation and Street", but this plot visualizes the trend for "E-Scooter Parking" complaints):
   - <p align="center">
     <img src="images/escooter-complaints-line-chart.jpg" alt="Alt text" width="1000"/>
     </p>
