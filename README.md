@@ -13,8 +13,7 @@ The pbix file can be downloaded here:
 ## ELT Pipeline and Data Model
 
 - **csr_dag.py:** This Python script creates the Airflow DAG, pictured below:
-  - 
-<p align="center">
+  - <p align="center">
 <img src="images/dag.jpg" alt="Alt text" width="1000"/>
 </p>
   - The executed tasks are
@@ -42,7 +41,7 @@ The pbix file can be downloaded here:
  
 - As of Mar. 19, 2025, the raw SR data since Jan. 1, 2023 contained 4,027,028 data points. The processed SRs data contained 2,277,208 rows.
 - The processed dataset are shown in the PBI data model below:
-- <p align="center">
+<p align="center">
 <img src="images/data-model.jpg" alt="Alt text" width="1000"/>
 </p>
 
@@ -59,12 +58,20 @@ Here are some more specific insights that the city could use to improve services
 
 - “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. Some sort of enforcement or resource management measure is suggested to decrease these complaints in the upcoming summer and fall.
   - Below is a line chart of this trend across the city:
-  - <image>
+  - <p align="center">
+<img src="images/escooter-complaints-line-chart.jpg" alt="Alt text" width="1000"/>
+</p>
   - The maps below visualize the number of complaints of this request type in the North Side in 2023 and 2024, respectively.
-  - <image> 
-  - <image>
+  - <p align="center">
+<img src="images/north-side-escooter-complaints-2023.jpg" alt="Alt text" width="1000"/>
+</p> 
+  - <p align="center">
+<img src="images/north-side-escooter-complaints-2024.jpg" alt="Alt text" width="1000"/>
+</p> 
 - There was a large spike in “Water Lead Test Visit Requests” made in Jan. 2025 (graph below). The Far Southeast Side and West Side made up most of these requests.
-  - <image>
+  - <p align="center">
+<img src="images/lead-test-visit-request-line-chart.jpg" alt="Alt text" width="1000"/>
+</p> 
 - Unsurprisingly, tree-related service requests were more common during the summer, but there were almost twice as many requests for “Tree Debris Clean-Up Request” and “Tree Emergency” in 2024 than in 2023, and the yearly average completion time across both request types increased from 5 days to 8 days. These 2024 timeframes were longest in the Southwest Side (average 11 days) and Far Southwest Side (also 11 days). While the average completion time for "Tree Emergencies" decreased from 4 days to 3 days across the city,  “Tree Debris Clean-Up Requests” saw an increase from 5 days in 2023 to 13 days in 2024 (again, across the entire city). The Southwest Side had the longest average completion time for “Tree Debris Clean-Up Requests” for both years while also seeing it increase from 8 days to 20.
 - “No Water Complaint” requests spiked in Jan. 2024 and Jan. 2025. In Jan. 2025, these were most common in the West Side. Across Chicago, the average completion time for this complaint decreased from 38 days to 7.
 - Although there was only a small increase in the number of service requests for “Commercial Fire Safety Inspection Request” from 2023 to 2024, the average completion time increased significantly from 5 days to 26 days, driven by sharp increases in Jul.-Sep. 2024. In 2023, the North Side had the highest average of 7 days. In 2024, Far Southeast and Far Southwest Sides had the longest of 47 and 41 days, respectively. Without knowing the internal workings of the city's fire department, this may be worth investigating.
