@@ -6,6 +6,8 @@ In this project, I developed an automated end-to-end ELT data pipeline that extr
 
 Complementary data tables that I created manually are (1). Table of Chicago's sides (e.g., North Side) and community areas (e.g., Humboldt Park); and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal.
 
+To avoid posting any keys and credentials, I only uploaded the Python script for my Airflow DAG and data transformation; docker-compose yaml file; and the Dockerfile and requirements.txt files.
+
 My interactive Power BI dashboard can be viewed here (data collected on Mar. 19, 2025): https://app.powerbi.com/view?r=eyJrIjoiZjRmZDk5MzYtZTgxOS00MjM3LTkxYmQtNDAzNmY4NDliNDAzIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
 
 The pbix file can be downloaded here: https://drive.google.com/file/d/1f07mz5zQbfhoZL6nrrBVhBj_5F1k3teo
