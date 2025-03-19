@@ -13,7 +13,10 @@ The pbix file can be downloaded here:
 ## ELT Pipeline and Data Model
 
 - **csr_dag.py:** This Python script creates the Airflow DAG, pictured below:
-  - <image>
+  - 
+<p align="center">
+<img src="images/dag.jpg" alt="Alt text" width="1000"/>
+</p>
   - The executed tasks are
     - **latest_only:** My DAG is scheduled to run every week, but if there are any missed runs, this task ensures that the DAG is executed only once to get the most recent two years of data.
     - **download_data:** This task downloads SR data from the API provided by the City of Chicago to the Airflow Docker container.
@@ -39,7 +42,9 @@ The pbix file can be downloaded here:
  
 - As of Mar. 19, 2025, the raw SR data since Jan. 1, 2023 contained 4,027,028 data points. The processed SRs data contained 2,277,208 rows.
 - The processed dataset are shown in the PBI data model below:
-- <image>
+- <p align="center">
+<img src="images/data-model.jpg" alt="Alt text" width="1000"/>
+</p>
 
 ## Summary of Findings
 
