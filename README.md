@@ -42,7 +42,7 @@ The pbix file can be downloaded here:
 - As of Mar. 19, 2025, the raw SR data since Jan. 1, 2023 contained 4,027,028 data points. The processed SRs data contained 2,277,208 rows.
 - The processed dataset are shown in the PBI data model below:
 <p align="center">
-<img src="images/data-model.jpg" alt="Alt text" width="1000"/>
+<img src="images/data-model.jpg" alt="Alt text" width="800"/>
 </p>
 
 ## Summary of Findings
