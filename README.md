@@ -63,10 +63,10 @@ Here are some more specific insights that the city could use to improve services
     </p>
   - The maps below visualize the number of complaints of this request type in the North Side in 2023 and 2024, respectively.
   - <p align="center">
-    <img src="images/north-side-escooter-complaints-2023.jpg" alt="Alt text" width="600"/>
+    <img src="images/north-side-escooter-complaints-2023.jpg" alt="Alt text" width="750"/>
     </p> 
   - <p align="center">
-    <img src="images/north-side-escooter-complaints-2024.jpg" alt="Alt text" width="600"/>
+    <img src="images/north-side-escooter-complaints-2024.jpg" alt="Alt text" width="750"/>
     </p> 
 - There was a large spike in “Water Lead Test Visit Requests” made in Jan. 2025 (graph below). The Far Southeast Side and West Side made up most of these requests.
   - <p align="center">
