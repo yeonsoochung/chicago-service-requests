@@ -6,7 +6,7 @@ In this project, I developed an automated end-to-end ELT data pipeline that extr
 
 Complementary data tables that I created manually are (1). Table of Chicago's sides (e.g., North Side) and community areas (e.g., Humboldt Park); and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal.
 
-My interactive Power BI dashboard can be viewed here (data collected on Mar. 17, 2025):
+My interactive Power BI dashboard can be viewed here (data collected on Mar. 19, 2025):
 
 The pbix file can be downloaded here:
 
@@ -21,24 +21,23 @@ The pbix file can be downloaded here:
     - **load_gcs_to_bq_csr:** Loads the raw SR data from GCS bucket to BigQuery.
     - **load_bcs_to_bq_ca:** I manually created data on the city's sides/community areas and uploaded it to my GCS bucket. This task loads this data table to BigQuery.
     - **load_gcs_to_bq_categories:** I manually created data on available SR categories, subcategories, and types. This task loads this data table to BigQuery.
-    - **run_bq_transform_sr_data:** This task runs the **transform_sr_data** function from the **csr_bq_transform_data.py** script (more on this script later) to process the raw SRs and categories dataset for visualization.
+    - **run_bq_transform_sr_data:** This task runs the **transform_sr_data** function from the **csr_bq_transform_data.py** script (more on this script later) to process the raw SRs and categories dataset for visualization. It also creates the dates table.
     - **run_bq_transform_community_areas_data:** Runs the **community_areas** function from **csr_bq_transform_data.py**.
-    - **run_bq_create_dates_table:** Runs the **dates_table** function from **csr_bq_transform_data.py** to create the dates table for Power BI.
    
 - **csr_bq_transform_data.py:** This script contains the following functions for preparing and transforming the data.
   - **transform_sr_data:** Below are some of the main transformations this function applies.
     - Remove "Aircraft Noise Complaint" SRs (~17% of all SRs).
     - Remove "311 INFORMATION ONLY CALL" SRs (~36% of all SRs).
     - Remove data that do not have latitude or longitude information (~0.05% of data).
-    - Create new attribute 'Completion Time in Days' for SRs.
+    - Create new attribute 'Completion Time in Days' for SRs by taking the date difference between the created and completed dates for each SR.
     - Join the SRs data table with the categories data table.
-    - There are some SRs that were completed extremely quickly. For example, multiple graffiti removal requests at the same location were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I group the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with the associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and the rest of the attributes are the first available value.
+    - There are some SRs that were completed extremely quickly. For example, multiple graffiti removal requests at the same location were completed in less than a day. I believe most of these are instances of multiple people reporting the same issue, so these repeated requests were quickly closed. To work around this, I group the SR data by Latitude, Longitude, Created Date, SR Category, SR Sub-Category, and SR Type. Then, for each grouping that contains completed SRs, I aggregate by the maximum "Completion Time in Days" along with its associated SR Number, Status ("Completed"), Street Address, and Area Number. For groupings that contain open SRs, "Completion Time in Days" is null, Status is "Open", and the rest of the attributes are the first available value.
     - Based on the completion times computed above, I create new columns "Closed Date"
     - Created "Open SR Time in Days" for open SRs, which is the number of days between "Created Date" and date that this pipeline was executed.
   - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
   - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
  
-- As of Mar. 17, 2025, the raw SRs data from the past two years contained 3,689,117 data points. The processed SRs data contained 2,095,197 rows.
+- As of Mar. 19, 2025, the raw SRs data from the past two years contained 4,027,028 data points. The processed SRs data contained 2,085,457 rows.
 - The processed dataset are shown in the PBI data model below:
 - <image>
 
