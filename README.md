@@ -6,9 +6,9 @@ In this project, I developed an automated end-to-end ELT data pipeline that extr
 
 Complementary data tables that I created manually are (1). Table of Chicago's sides (e.g., North Side) and community areas (e.g., Humboldt Park); and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal.
 
-My interactive Power BI dashboard can be viewed here (data collected on Mar. 19, 2025):
+My interactive Power BI dashboard can be viewed here (data collected on Mar. 19, 2025): https://app.powerbi.com/view?r=eyJrIjoiZjRmZDk5MzYtZTgxOS00MjM3LTkxYmQtNDAzNmY4NDliNDAzIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
 
-The pbix file can be downloaded here:
+The pbix file can be downloaded here: https://drive.google.com/file/d/1f07mz5zQbfhoZL6nrrBVhBj_5F1k3teo
 
 Below is an image of the first page of my report.
 
