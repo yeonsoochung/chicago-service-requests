@@ -37,7 +37,7 @@ The pbix file can be downloaded here:
   - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
   - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
  
-- As of Mar. 19, 2025, the raw SRs data from the past two years contained 4,027,028 data points. The processed SRs data contained 2,085,457 rows.
+- As of Mar. 19, 2025, the raw SRs data from the past two years contained 4,027,028 data points. The processed SRs data contained 2,277,208 rows.
 - The processed dataset are shown in the PBI data model below:
 - <image>
 
