@@ -29,7 +29,7 @@ The first page analyzes the unique SRs submitted. The second page contains SR da
     <img src="images/dag.jpg" alt="Alt text" width="1000"/>
     </p>
   - The executed tasks are
-    - **latest_only:** My DAG is scheduled to run every week, but if there are any missed runs, this task ensures that the DAG is executed only once to get the most recent two years of data.
+    - **latest_only:** My DAG is scheduled to run every week, but if there are any missed runs, this task ensures that the DAG is executed only once to get the most recent batch of data.
     - **download_data:** This task downloads SR data from the API provided by the City of Chicago to the Airflow Docker container.
     - **upload_to_gcs:** Uploads the SR data from the container to Google Cloud Storage bucket.
     - **load_gcs_to_bq_csr:** Loads the raw SR data from GCS bucket to BigQuery.
