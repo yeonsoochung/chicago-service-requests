@@ -70,7 +70,7 @@ Here are some more specific insights that the city could use to improve services
 
 - Although there was only a small increase in the number of service requests for “Commercial Fire Safety Inspection Request” from 2023 to 2024, the average completion time increased significantly from 5 days to 26 days, driven by sharp increases in Jul.-Sep. 2024. In 2023, the North Side had the highest average of 7 days. In 2024, Far Southeast and Far Southwest sides had the longest of 47 and 41 days, respectively. This may be worth investigating.
 - “No Water Complaint” requests spiked in Jan. 2024 and Jan. 2025. In Jan. 2025, these were most common in the West Side. Across Chicago, the average completion time for this complaint decreased from 38 days in 2023 to 7 in 2024.
-- “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. Some sort of enforcement or resource management measure is suggested to decrease these complaints in the upcoming summer and fall.
+- “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. It maybe worthwhile to consider some sort of enforcement or resource management measures to decrease these complaints in the upcoming summer and fall.
   - Below is a line chart of this trend across the city (the legend only says "Transportation and Street", but this plot visualizes the trend for "E-Scooter Parking" complaints):
   - <p align="center">
     <img src="images/escooter-complaints-line-chart.jpg" alt="Alt text" width="1000"/>
@@ -87,8 +87,8 @@ Here are some more specific insights that the city could use to improve services
     <img src="images/lead-test-visit-request-line-chart.jpg" alt="Alt text" width="1000"/>
     </p> 
 - Unsurprisingly, tree-related service requests were more common during the summer, but there were almost twice as many requests for “Tree Debris Clean-Up Request” and “Tree Emergency” in 2024 than in 2023, and the yearly average completion time across both request types increased from 5 days to 8 days.
-  - These 2024 timeframes were longest in the Southwest Side (average 11 days) and Far Southwest Side (also 11 days).
-  - While the average completion time for "Tree Emergencies" decreased from 4 days to 3 days across the city,  “Tree Debris Clean-Up Requests” saw an increase from 5 days in 2023 to 13 days in 2024 (again, across the entire city).
+  - Average completion times in 2024 were longest in the Southwest Side (average 11 days) and Far Southwest Side (also 11 days).
+  - While the average completion time for "Tree Emergencies" decreased from 4 days in 2023 to 3 days in 2024 across the city,  “Tree Debris Clean-Up Requests” saw an increase from 5 days to 13 days (again, across the entire city).
   - The Southwest Side had the longest average completion time for “Tree Debris Clean-Up Requests” for both years while also seeing it increase from 8 days to 20.
 
 
