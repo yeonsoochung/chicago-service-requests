@@ -75,7 +75,7 @@ Here are some more specific insights that the city could use to improve services
   - <p align="center">
     <img src="images/escooter-complaints-line-chart.jpg" alt="Alt text" width="1000"/>
     </p>
-  - The maps below visualize the number of complaints of this request type in the North Side in 2023 and 2024, respectively.
+  - The maps below visualize the number of e-scooter parking complaints in the North Side in 2023 and 2024, respectively.
   - <p align="center">
     <img src="images/north-side-escooter-complaints-2023.jpg" alt="Alt text" width="750"/>
     </p> 
