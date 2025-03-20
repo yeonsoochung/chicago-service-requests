@@ -68,8 +68,8 @@ Below are some high-level general insights.
 
 Here are some more specific insights that the city could use to improve services.
 
-- Although there was only a small increase in the number of service requests for “Commercial Fire Safety Inspection Request” from 2023 to 2024, the average completion time increased significantly from 5 days to 26 days, driven by sharp increases in Jul.-Sep. 2024. In 2023, the North Side had the highest average of 7 days. In 2024, Far Southeast and Far Southwest Sides had the longest of 47 and 41 days, respectively. This may be worth investigating.
-- “No Water Complaint” requests spiked in Jan. 2024 and Jan. 2025. In Jan. 2025, these were most common in the West Side. Across Chicago, the average completion time for this complaint decreased from 38 days to 7.
+- Although there was only a small increase in the number of service requests for “Commercial Fire Safety Inspection Request” from 2023 to 2024, the average completion time increased significantly from 5 days to 26 days, driven by sharp increases in Jul.-Sep. 2024. In 2023, the North Side had the highest average of 7 days. In 2024, Far Southeast and Far Southwest sides had the longest of 47 and 41 days, respectively. This may be worth investigating.
+- “No Water Complaint” requests spiked in Jan. 2024 and Jan. 2025. In Jan. 2025, these were most common in the West Side. Across Chicago, the average completion time for this complaint decreased from 38 days in 2023 to 7 in 2024.
 - “E-Scooter Parking” complaints have increased more than two-fold from 2023 to 2024, mostly driven by increases in the North Side. Some sort of enforcement or resource management measure is suggested to decrease these complaints in the upcoming summer and fall.
   - Below is a line chart of this trend across the city (the legend only says "Transportation and Street", but this plot visualizes the trend for "E-Scooter Parking" complaints):
   - <p align="center">
