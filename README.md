@@ -33,9 +33,9 @@ The first page analyzes the unique SRs submitted. The second page contains SR da
     - **download_data:** This task downloads SR data from the API provided by the City of Chicago to the Airflow Docker container.
     - **upload_to_gcs:** Uploads the SR data from the container to Google Cloud Storage bucket.
     - **load_gcs_to_bq_csr:** Loads the raw SR data from GCS bucket to BigQuery.
-    - **load_bcs_to_bq_ca:** I manually created data on the city's sides/community areas and uploaded it to my GCS bucket. This task loads this data table to BigQuery.
-    - **load_gcs_to_bq_categories:** I manually created data on available SR categories, subcategories, and types. This task loads this data table to BigQuery.
-    - **run_bq_transform_sr_data:** This task runs the **transform_sr_data** function from the **csr_bq_transform_data.py** script (more on this script later) to process the raw SRs and categories dataset for visualization. It also creates the dates table.
+    - **load_bcs_to_bq_ca:** I manually created a table on the city's sides/community areas and uploaded it to my GCS bucket. This task loads this data table to BigQuery.
+    - **load_gcs_to_bq_categories:** I manually created a table on available SR categories, subcategories, and types. This task loads this data table to BigQuery.
+    - **run_bq_transform_sr_data:** This task runs the **transform_sr_data** function from the **csr_bq_transform_data.py** script (more on this script later) to process the raw SRs and categories data for visualization. It also creates the dates table.
     - **run_bq_transform_community_areas_data:** Runs the **community_areas** function from **csr_bq_transform_data.py**.
    
 - **csr_bq_transform_data.py:** This script contains the following functions for preparing and transforming the data.
@@ -49,7 +49,7 @@ The first page analyzes the unique SRs submitted. The second page contains SR da
     - Based on the completion times computed above, I created a new column "Closed Date" by adding "Completion Time in Days" to "Created Date". This column contains null values for open requests.
     - Created "Open SR Time in Days" for open SRs, which is the number of days between "Created Date" and date that this pipeline was executed.
   - **community_areas:** This formats the sides and community areas data table by title-casing the names and adding 2022 population data for each area.
-  - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week, date of first day of month, etc.
+  - **dates_table:** Creates table of dates that covers the range of the SR data, and adds columns such as month name, year, date of first day of week (Sunday), date of first day of month, etc.
  
 - As of Mar. 19, 2025, the raw SR data since Jan. 1, 2023 contained 4,027,028 data points. The processed SRs data contained 2,277,208 rows.
 - The processed dataset are shown in the PBI data model below:
