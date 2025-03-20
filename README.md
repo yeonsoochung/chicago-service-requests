@@ -20,7 +20,7 @@ Below is an image of the first page of my report.
 <img src="images/dashboard.jpg" alt="Alt text" width="1000"/>
 </p>
 
-The first page analyzes the unique SRs submitted. The second page contains SR data by catengory, sub-category, and type. Some service request types fall under multiple categories/sub-categories, so a separate page was created for this analysis. The third and fourth pages contain map visualizations of unique SRs and SRs by category.
+The first page analyzes the unique SRs submitted. The second page contains SR data by category, sub-category, and type. Some service request types fall under multiple categories/sub-categories, so a separate page was created for this analysis. The third and fourth pages contain map visualizations of unique SRs and SRs by category, respectively.
 
 ## ELT Pipeline and Data Model
 
