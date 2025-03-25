@@ -4,7 +4,7 @@ The City of Chicago regularly collects and publishes many types of city-related 
 
 In this project, I was interested in analyzing this data to answer questions such as: what are some inconspicuous trends that the city should consider investigating? What trends can help the city manage resources better? How are the different service request types and categories distributed across time and the city's community areas?
 
-I developed an automated end-to-end ELT data pipeline that extracts SR data since Jan. 1, 2023 via their API; store the data in Google Cloud Storage; load it to BigQuery for transformation with Python (Pandas); and then import the processed data to Power BI for visual analysis.
+I developed an automated end-to-end ELT data pipeline to extract SR data since Jan. 1, 2023 via their API; store the data in Google Cloud Storage; load it to BigQuery for transformation with Python (Pandas); and then import the processed data to Power BI for visual analysis.
 
 Complementary data tables that I created manually are (1). Table of Chicago's sides (e.g., North Side), community areas (e.g., Humboldt Park), and their respective 2022 populations; and (2). Table of categories, subcategories, and types that service requests can fall under, which I obtained directly from the city's SR portal and the extracted data itself.
 
