@@ -2,7 +2,7 @@
 
 The City of Chicago regularly collects and publishes many types of city-related data. Among them are 311 city service requests (SRs): https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy/about_data
 
-In this project, I was interested in analyzing this data to answer questions such as: what are some inconspicuous trends that the city should consider investigating? What trends can help the city manage resources better? How are the different service request types and categories distributed across time and the city's community areas?
+In this project, I was interested in analyzing this data to answer questions such as: what are some hidden trends that the city should consider investigating? What trends can help the city manage resources better? How are the different service request types and categories distributed across time and the city's community areas?
 
 I developed an automated end-to-end ELT data pipeline to extract SR data since Jan. 1, 2023 via their API; store the data in Google Cloud Storage; load it to BigQuery for transformation with Python (Pandas); and then import the processed data to Power BI for visual analysis.
 
@@ -10,9 +10,9 @@ Complementary data tables that I created manually are (1). Table of Chicago's si
 
 To avoid posting any keys and credentials, I only uploaded the Python script for my Airflow DAG and data transformation; docker-compose yaml file; and the Dockerfile and requirements.txt files.
 
-My interactive Power BI dashboard can be viewed here (data collected on Mar. 19, 2025): https://app.powerbi.com/view?r=eyJrIjoiM2NlNzlhNDctZTQ1Ni00Njg1LThiMzctOTlmNTJiOWNkMGRiIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
+My interactive Power BI dashboard can be viewed here (data collected on Apr. 20, 2025): https://app.powerbi.com/view?r=eyJrIjoiMWY5ZGY5NGEtMjVhNS00MDM4LTkxM2YtNzhiMTc4Yjk3MDFlIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
 
-The pbix file can be downloaded here: https://drive.google.com/file/d/1IDBCcxid6pNVlmzeWW0GBR9j1YMvq-UJ
+The pbix file can be downloaded here: https://drive.google.com/file/d/1CP8tbOTfwRLbvTRiFps2sHNLD53jNLzC
 
 I will make attempts to update this dashboard at least once a month. I plan to include data that includes two full years (Jan. 1 - Dec. 31) prior to updating as well as the current year up to the date my pipeline is executed.
 
