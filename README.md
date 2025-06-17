@@ -10,9 +10,9 @@ Complementary data tables that I created manually are (1). Table of Chicago's si
 
 To avoid posting any keys and credentials, I only uploaded the Python script for my Airflow DAG and data transformation; docker-compose yaml file; and the Dockerfile and requirements.txt files.
 
-My interactive Power BI dashboard can be viewed here (data collected on Apr. 20, 2025): https://app.powerbi.com/view?r=eyJrIjoiMWY5ZGY5NGEtMjVhNS00MDM4LTkxM2YtNzhiMTc4Yjk3MDFlIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
+My interactive Power BI dashboard can be viewed here (data collected on June 9, 2025): https://app.powerbi.com/view?r=eyJrIjoiYTE2ZTEzZmYtMTBjNy00OWRhLTgyYzgtOTYyNjRmNzI2NWY2IiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
 
-The pbix file can be downloaded here: https://drive.google.com/file/d/1CP8tbOTfwRLbvTRiFps2sHNLD53jNLzC
+The pbix file can be downloaded here: https://drive.google.com/file/d/1cSzzilIAu4E0AfQSxx6oy1jJiAxx1Ec-
 
 I will make attempts to update this dashboard at least once a month. I plan to include data that includes two full years (Jan. 1 - Dec. 31) prior to updating as well as the current year up to the date my pipeline is executed.
 
@@ -22,7 +22,7 @@ Below is an image of the first page of my report.
 <img src="images/dashboard.jpg" alt="Alt text" width="1000"/>
 </p>
 
-The first page analyzes the unique SRs submitted. The second page contains SR data by category, sub-category, and type. Some service request types fall under multiple categories/sub-categories, so a separate page was created for this analysis. The third and fourth pages contain map visualizations of unique SRs and SRs by category, respectively.
+The first page analyzes the unique SRs submitted. The second page contains SR data by category, sub-category, and type. Some service request types fall under multiple categories/sub-categories, so a separate page was created for this analysis.
 
 ## ELT Pipeline and Data Model
 
@@ -77,13 +77,6 @@ Here are some more specific insights that the city could use to improve services
   - <p align="center">
     <img src="images/escooter-complaints-line-chart.jpg" alt="Alt text" width="1000"/>
     </p>
-  - The maps below visualize the number of e-scooter parking complaints in the North Side in 2023 and 2024, respectively.
-  - <p align="center">
-    <img src="images/north-side-escooter-complaints-2023.jpg" alt="Alt text" width="750"/>
-    </p> 
-  - <p align="center">
-    <img src="images/north-side-escooter-complaints-2024.jpg" alt="Alt text" width="750"/>
-    </p> 
 - There was a large spike in “Water Lead Test Visit Requests” made in Jan. 2025 (graph below). The Far Southeast Side and West Side made up most of these requests.
   - <p align="center">
     <img src="images/lead-test-visit-request-line-chart.jpg" alt="Alt text" width="1000"/>
