@@ -1,0 +1,25 @@
+# Secrets
+.env
+keys/
+
+# Airflow logs and temp data
+logs/
+plugins/
+airflow_home/
+__pycache__/
+
+# Data exports from DAGs
+data/
+tmp/
+*.csv
+*.json
+
+# Python cache & virtualenvs
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# System files
+.DS_Store
