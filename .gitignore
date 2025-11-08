@@ -23,3 +23,6 @@ venv/
 
 # System files
 .DS_Store
+
+# Old Pandas transformation script
+dags/csr_bq_transform_data.py
