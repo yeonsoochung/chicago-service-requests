@@ -11,7 +11,7 @@ from requests.exceptions import ReadTimeout
 from google.cloud import storage
 import pandas as pd
 from sodapy import Socrata
-import csr_bq_transform_data
+# import csr_bq_transform_data
 import os
 
 # Define API input parameters and file path variables
@@ -163,19 +163,53 @@ load_gcs_to_bq_task_3 = GCSToBigQueryOperator(
     dag=dag,
 )
 
-# Task to transform csr_raw data table and create dates table
-transform_sr = PythonOperator(
-    task_id="run_bq_transform_sr_data",
-    python_callable=csr_bq_transform_data.transform_sr_data,
-    dag=dag
+# Read sql files
+sql_staging_path = "dags/csr_staging.sql"
+with open(sql_staging_path, "r") as staging_file:
+    sql_staging_query = staging_file.read()
+
+sql_processing_path = "dags/csr_processing.sql"
+with open(sql_processing_path, "r") as processing_file:
+    sql_processing_query = processing_file.read()
+
+# Backup existing csr_processed table
+bq_data_backup = BigQueryInsertJobOperator(
+    task_id = "backup_csr_processed",
+    configuration = {
+        "query": {
+            "query": """
+            CREATE OR REPLACE TABLE `chicago_service_requests.csr_processed_backup` AS
+            SELECT * FROM `chicago_service_requests.csr_processed`;
+            """,
+            "useLegacySql": False,
+        }
+    }
 )
 
-transform_ca = PythonOperator(
-    task_id="run_bq_transform_community_areas_data",
-    python_callable=csr_bq_transform_data.community_areas,
-    dag=dag
+# Task to stage and transform csr_raw data table and create dates and community_areas_processed tables
+staging_query = BigQueryInsertJobOperator(
+    task_id="run_staging_query",
+    configuration={
+        "query": {
+            "query": sql_staging_query,
+            "useLegacySql": False
+        }
+    },
+    dag=dag,
+)
+
+processing_query = BigQueryInsertJobOperator(
+    task_id="run_processing_query",
+    configuration={
+        "query": {
+            "query": sql_processing_query,
+            "useLegacySql": False
+        }
+    },
+    dag=dag,
 )
 
 # Define task dependencies
-latest_only >> download_task >> upload_to_gcs_task >> load_gcs_to_bq_task_1 >> load_gcs_to_bq_task_2 >> load_gcs_to_bq_task_3 >> transform_sr >> transform_ca
+latest_only >> download_task >> upload_to_gcs_task >> load_gcs_to_bq_task_1 >> load_gcs_to_bq_task_2 >> load_gcs_to_bq_task_3 >> bq_data_backup >> \
+    staging_query >> processing_query
 
