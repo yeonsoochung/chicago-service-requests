@@ -10,9 +10,9 @@ Complementary data tables that I created manually are (1). Table of Chicago's si
 
 To avoid posting any keys and credentials, I only uploaded the Python script for my Airflow DAG and data transformation; docker-compose yaml file; and the Dockerfile and requirements.txt files.
 
-My interactive Power BI dashboard can be viewed here (data collected on Sep. 25, 2025): https://app.powerbi.com/view?r=eyJrIjoiOTIyYWZlMDktY2RiYy00NDliLTg1YjgtNGYzODU5NDI5ZGM5IiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
+My interactive Power BI dashboard can be viewed here (data collected on Nov. 7, 2025): https://app.powerbi.com/view?r=eyJrIjoiOTQ4MTRlZjMtZTYzNy00NTQ4LWFjZGUtYmFjNzk0ZmY0N2JlIiwidCI6ImJlMjI4MDdiLTI1OTEtNDBkNy1iYmI2LTBkYTg0ZDMxYWNmNyIsImMiOjN9
 
-The pbix file can be downloaded here: https://drive.google.com/file/d/1zimBudw24xVrT9y-uaWVNhWzvqEiClGR
+The pbix file can be downloaded here: https://drive.google.com/file/d/1DHPvEVRp5vXA_cC4EjiTmx0jPVwTqJgp
 
 I will make attempts to update this dashboard at least once a month. I plan to include data that includes two full years (Jan. 1 - Dec. 31) prior to updating as well as the current year up to the date my pipeline is executed.
 
