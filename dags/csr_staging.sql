@@ -2,13 +2,12 @@
 CREATE OR REPLACE TABLE `chicago_service_requests.dates` AS
 WITH date_range AS (
   SELECT 
-    DATE(MIN(created_date)) AS min_date,
-    DATE(MAX(created_date)) AS max_date
-  FROM `chicago_service_requests.csr_raw`
+    (SELECT DATE(MIN(`Created Date`)) FROM `chicago_service_requests.csr_processed_backup`) AS min_date,
+    (SELECT DATE(MAX(created_date)) FROM `chicago_service_requests.csr_raw`) AS max_date
 ),
 dates AS (
   SELECT 
-    DATE(day) AS Date
+    day AS Date
   FROM date_range, 
   UNNEST(GENERATE_DATE_ARRAY(min_date, max_date, INTERVAL 1 DAY)) AS day
 ),

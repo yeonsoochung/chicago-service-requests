@@ -17,7 +17,7 @@ import os
 # Define API input parameters and file path variables
 app_token = os.getenv("API_KEY")
 client = Socrata("data.cityofchicago.org", app_token) 
-csv_name = "chicago-service-requests.csv"
+csv_name = "chicago-service-requests-recent.csv" # recent incremental batch
 csv_path = f"/opt/airflow/data/{csv_name}"
 gcs_bucket = "csr-project-bucket"
 gcs_path = f"csv-data/{csv_name}"
@@ -47,10 +47,7 @@ def create_csv(app_token, client):
     offset = 0
     client.timeout = 180
 
-    # today = datetime.now()
-    # start_date = today - timedelta(days = 7)
-    # start_date = start_date.strftime("%Y-%m-%dT%H:%M:%S")  # Format as ISO 8601
-    start_date = '2023-01-01T00:00:00'
+    start_date = '2025-01-01T00:00:00' # get recent batch of data
 
     while True:
         # Retrieve a chunk of data
