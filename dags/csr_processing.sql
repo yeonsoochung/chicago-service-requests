@@ -1,5 +1,5 @@
 -- Create csr_processed table in BigQuery
-CREATE OR REPLACE TABLE `chicago_service_requests.csr_processed` AS
+CREATE OR REPLACE TABLE `chicago_service_requests.csr_processed_recent` AS
 WITH csr_open AS (
   SELECT
     `SR Number`,
@@ -72,4 +72,15 @@ SELECT
 FROM csr_all
 ORDER BY `Created Date`;
 
+-- Append new processed data to existing
+CREATE OR REPLACE TABLE `chicago_service_requests.csr_processed` AS (
+SELECT `SR Number`, `SR Type`, `Status`, `Created Date`, `Completion Time in Days`, `Closed Date`, `Open SR Time in Days`,
+  `SR Category`, `SR Sub-Category`, `Street Address`, `Area Number`, `Latitude`, `Longitude`
+FROM (
+    SELECT * FROM `chicago_service_requests.csr_processed`
+    WHERE `Created Date` < (SELECT MIN(`Created Date`) FROM `chicago_service_requests.csr_processed_recent`)
+    UNION ALL
+    SELECT * FROM `chicago_service_requests.csr_processed_recent` )
+ORDER BY `Created Date`
+)
 
